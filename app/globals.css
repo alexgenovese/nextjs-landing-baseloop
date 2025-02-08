@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply tracking-tight;
+  }
+}
+
+@layer components {
+  .button-primary {
+    @apply bg-black text-white hover:bg-gray-800 transition-colors rounded-full px-8;
+  }
+}
+
+@layer utilities {
+  .feature-image {
+    @apply shadow-[0_8px_30px_rgb(0,0,0,0.12)] rounded-lg;
+  }
+}
+
